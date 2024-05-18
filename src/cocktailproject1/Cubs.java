@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package cocktailproject1;
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author hp
@@ -27,20 +30,21 @@ public class Cubs {
         return capacity;
     }
      
-    public void pour()throws CocktailExp{
+    public void pour()throws CocktailExp,CubExp{
         if(testVolume != 0){
             while(testVolume >= this.capacity)
             {
               testVolume-=this.capacity;
               cubsNo++; 
+              getInfo();
             }
-
-            System.out.println("can't pour more complete cubs!!"+" The number of full cubs= "+cubsNo);   
+            cubCalorie=cubCalories();
+            System.out.println("The number of full cubs= "+cubsNo);
+            throw new CubExp();
         }
         else{
             throw new CocktailExp();
         }
-        cubCalorie=cubCalories();
     }  
     
     public double cubCalories(){

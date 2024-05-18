@@ -12,14 +12,14 @@ import java.awt.Color;
 public class Milk extends Ingredients{
 
     public Milk() {
-    super(50, "Milk", 20, new Color(255,255,255));
+    super(42, "Milk", 100, new Color(255,255,255));
     
     }
     
     @Override
     public String getInfo()
     {
-        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= "+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
+        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= ("+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
     } 
     
 }

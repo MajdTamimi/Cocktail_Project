@@ -12,7 +12,7 @@ import java.awt.Color;
 public class Sugar extends Ingredients {
 
     public Sugar() {
-       super(150, "Sugar", 0,new Color(0,0,0,0));
+       super(386, "Sugar",100,new Color(0,0,0,0));
 
     }
     /**

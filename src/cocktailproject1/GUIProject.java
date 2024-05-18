@@ -4,11 +4,16 @@
  */
 package cocktailproject1;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author majd2
  */
 public class GUIProject extends javax.swing.JFrame {
+    ArrayList<Ingredients> arr=new ArrayList<>();
+    Cocktail cocktail=new Cocktail();
 
     /**
      * Creates new form GUIProject
@@ -35,59 +40,62 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BananButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        BlueBerryButton = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        AppleButton = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        MangoButton = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        KiwiButton = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        StrawberryButton = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        SugarButton = new javax.swing.JButton();
         jPanel19 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        MilkButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jPanel21 = new javax.swing.JPanel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        InformationList = new javax.swing.JList<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BlendInformationTextArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cocktail Application");
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
         jLabel1.setFont(new java.awt.Font("Script MT Bold", 0, 45)); // NOI18N
@@ -133,13 +141,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel5.setText("88cal");
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton1.setText("Add");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BananButton.setBackground(new java.awt.Color(204, 204, 255));
+        BananButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        BananButton.setText("Add");
+        BananButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BananButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BananButtonActionPerformed(evt);
             }
         });
 
@@ -153,7 +161,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BananButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         jPanel3Layout.setVerticalGroup(
@@ -166,7 +174,7 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(BananButton)
                 .addGap(18, 18, 18))
         );
 
@@ -204,13 +212,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel8.setText("80cal");
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton2.setText("Add");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BlueBerryButton.setBackground(new java.awt.Color(204, 204, 255));
+        BlueBerryButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        BlueBerryButton.setText("Add");
+        BlueBerryButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BlueBerryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BlueBerryButtonActionPerformed(evt);
             }
         });
 
@@ -224,7 +232,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BlueBerryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -238,7 +246,7 @@ public class GUIProject extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton2)))
+                        .addComponent(BlueBerryButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -276,13 +284,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel11.setText("52cal");
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton3.setText("Add");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        AppleButton.setBackground(new java.awt.Color(204, 204, 255));
+        AppleButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        AppleButton.setText("Add");
+        AppleButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        AppleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AppleButtonActionPerformed(evt);
             }
         });
 
@@ -296,7 +304,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AppleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
         jPanel8Layout.setVerticalGroup(
@@ -310,7 +318,7 @@ public class GUIProject extends javax.swing.JFrame {
                         .addComponent(jLabel11))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton3)))
+                        .addComponent(AppleButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -348,13 +356,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel14.setText("60cal");
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 255));
-        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton4.setText("Add");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        MangoButton.setBackground(new java.awt.Color(204, 204, 255));
+        MangoButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        MangoButton.setText("Add");
+        MangoButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        MangoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                MangoButtonActionPerformed(evt);
             }
         });
 
@@ -368,7 +376,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel13)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MangoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
         jPanel10Layout.setVerticalGroup(
@@ -382,7 +390,7 @@ public class GUIProject extends javax.swing.JFrame {
                         .addComponent(jLabel14))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton4)))
+                        .addComponent(MangoButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -420,13 +428,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel17.setText("61cal");
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 255));
-        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton5.setText("Add");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        KiwiButton.setBackground(new java.awt.Color(204, 204, 255));
+        KiwiButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        KiwiButton.setText("Add");
+        KiwiButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        KiwiButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                KiwiButtonActionPerformed(evt);
             }
         });
 
@@ -440,7 +448,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel16)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(KiwiButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
         jPanel12Layout.setVerticalGroup(
@@ -453,7 +461,7 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(KiwiButton)
                 .addGap(18, 18, 18))
         );
 
@@ -491,13 +499,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel23.setText("33cal");
 
-        jButton7.setBackground(new java.awt.Color(204, 204, 255));
-        jButton7.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton7.setText("Add");
-        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        StrawberryButton.setBackground(new java.awt.Color(204, 204, 255));
+        StrawberryButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        StrawberryButton.setText("Add");
+        StrawberryButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        StrawberryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                StrawberryButtonActionPerformed(evt);
             }
         });
 
@@ -511,7 +519,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel22)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StrawberryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
@@ -525,7 +533,7 @@ public class GUIProject extends javax.swing.JFrame {
                         .addComponent(jLabel23))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton7)))
+                        .addComponent(StrawberryButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -563,13 +571,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel26.setText("386cal");
 
-        jButton8.setBackground(new java.awt.Color(204, 204, 255));
-        jButton8.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton8.setText("Add");
-        jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        SugarButton.setBackground(new java.awt.Color(204, 204, 255));
+        SugarButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        SugarButton.setText("Add");
+        SugarButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SugarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                SugarButtonActionPerformed(evt);
             }
         });
 
@@ -583,7 +591,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel25)
                     .addComponent(jLabel26))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SugarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         jPanel18Layout.setVerticalGroup(
@@ -597,7 +605,7 @@ public class GUIProject extends javax.swing.JFrame {
                         .addComponent(jLabel26))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jButton8)))
+                        .addComponent(SugarButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -635,13 +643,13 @@ public class GUIProject extends javax.swing.JFrame {
         jLabel29.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel29.setText("42cal");
 
-        jButton9.setBackground(new java.awt.Color(204, 204, 255));
-        jButton9.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        jButton9.setText("Add");
-        jButton9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        MilkButton.setBackground(new java.awt.Color(204, 204, 255));
+        MilkButton.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        MilkButton.setText("Add");
+        MilkButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        MilkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                MilkButtonActionPerformed(evt);
             }
         });
 
@@ -655,7 +663,7 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jLabel28)
                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MilkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         jPanel20Layout.setVerticalGroup(
@@ -668,7 +676,7 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton9)
+                .addComponent(MilkButton)
                 .addGap(17, 17, 17))
         );
 
@@ -736,21 +744,13 @@ public class GUIProject extends javax.swing.JFrame {
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
-
-        jTextArea1.setBackground(new java.awt.Color(212, 212, 249));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Script MT Bold", 0, 30))); // NOI18N
-        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jScrollPane1.setViewportView(jTextArea1);
 
         jPanel21.setBackground(new java.awt.Color(219, 219, 250));
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -758,7 +758,6 @@ public class GUIProject extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(213, 32, 32));
         jButton10.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
         jButton10.setText("Stop");
-        jButton10.setActionCommand("Stop");
         jButton10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton11.setBackground(new java.awt.Color(87, 193, 87));
@@ -770,6 +769,11 @@ public class GUIProject extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
         jButton12.setText("Blend");
         jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setBackground(new java.awt.Color(153, 153, 255));
         jButton13.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
@@ -786,15 +790,15 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel21Layout.setHorizontalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGap(224, 224, 224)
+                .addGap(162, 162, 162)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(93, 93, 93)
+                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addGap(83, 83, 83)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(221, 221, 221))
+                .addGap(293, 293, 293))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -808,6 +812,22 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        InformationList.setBackground(new java.awt.Color(218, 218, 248));
+        InformationList.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Script MT Bold", 0, 24))); // NOI18N
+        InformationList.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        InformationList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        InformationList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                InformationListValueChanged(evt);
+            }
+        });
+        jScrollPane2.setViewportView(InformationList);
+
+        BlendInformationTextArea.setBackground(new java.awt.Color(208, 208, 248));
+        BlendInformationTextArea.setColumns(20);
+        BlendInformationTextArea.setRows(5);
+        jScrollPane1.setViewportView(BlendInformationTextArea);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -819,8 +839,10 @@ public class GUIProject extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -829,55 +851,196 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    void newList(){
+        String []Ingredients=new String[arr.size()];
+         for (int i = 0; i < arr.size(); i++) {
+                Ingredients[i]=arr.get(i).getName();
+        }
+         InformationList.setListData(Ingredients);
+    }
+    private void BananButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BananButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        Banana item1=new Banana() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_BananButtonActionPerformed
+    
+    private void BlueBerryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlueBerryButtonActionPerformed
+        // TODO add your handling code here
+        BlueBerry item1=new BlueBerry() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+        
+    }//GEN-LAST:event_BlueBerryButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void AppleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppleButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        Apple item1=new Apple() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_AppleButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void MangoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MangoButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        Mango item1=new Mango() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_MangoButtonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void KiwiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KiwiButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        Kiwi item1=new Kiwi() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+            
+        }
+        
+    }//GEN-LAST:event_KiwiButtonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void StrawberryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StrawberryButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        Strawberry item1=new Strawberry() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+       
+    }//GEN-LAST:event_StrawberryButtonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void SugarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SugarButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+        Sugar item1=new Sugar() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_SugarButtonActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void MilkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MilkButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+        Milk item1=new Milk() ;
+        Blender b=new Blender();
+        try{
+            b.add(item1);
+            arr.add(item1);
+            b.blend(cocktail);
+            newList();
+        }
+        catch(BlenderExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_MilkButtonActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+//         TODO add your handling code here:
+        Cubs cub=new Cubs(cocktail);
+        try{
+           cub.pour();
+           
+        }
+        catch(CocktailExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+        }
+        catch(CubExp ex){
+            JOptionPane.showMessageDialog(this,ex.getMessage());
+            
+        }
+       
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void InformationListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InformationListValueChanged
+        // TODO add your handling code here:
+        int index=InformationList.getSelectedIndex();
+        if(index != -1){
+        Ingredients item=arr.get(index);
+        JOptionPane.showMessageDialog(this, item.getInfo());
+        }
+    }//GEN-LAST:event_InformationListValueChanged
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        BlendInformationTextArea.setText(cocktail.getInfo());
+//        String []InformationOfCocktail=new String[1];
+//         for (int i = 0; i < 1; i++) {
+//                InformationOfCocktail[i]=cocktail.getInfo();
+//        }
+//         InformationList.setListData(InformationOfCocktail);
+
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -915,19 +1078,20 @@ public class GUIProject extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton AppleButton;
+    private javax.swing.JButton BananButton;
+    private javax.swing.JTextArea BlendInformationTextArea;
+    private javax.swing.JButton BlueBerryButton;
+    private javax.swing.JList<String> InformationList;
+    private javax.swing.JButton KiwiButton;
+    private javax.swing.JButton MangoButton;
+    private javax.swing.JButton MilkButton;
+    private javax.swing.JButton StrawberryButton;
+    private javax.swing.JButton SugarButton;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -937,10 +1101,7 @@ public class GUIProject extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -961,8 +1122,6 @@ public class GUIProject extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
@@ -979,7 +1138,7 @@ public class GUIProject extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

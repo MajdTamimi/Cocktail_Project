@@ -12,7 +12,7 @@ import java.awt.Color;
 public class Apple extends Fruit{
     
     public Apple() {
-        super(36, "Apple", 13, new Color(102,204,51));
+        super(52, "Apple", 100, new Color(102,204,51));
     }
     /**
      *
@@ -21,7 +21,7 @@ public class Apple extends Fruit{
    @Override
     public String getInfo()
     {
-        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= "+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
+        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= ("+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
     }
     
 }

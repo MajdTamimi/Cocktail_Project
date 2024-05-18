@@ -13,7 +13,7 @@ import java.awt.Color;
 public class Strawberry extends Fruit{
 
     public Strawberry() {
-        super(35, "Strawberry", 22, new Color(229,57,57));
+        super(33, "Strawberry", 100, new Color(229,57,57));
     }
 
     /**
@@ -23,7 +23,7 @@ public class Strawberry extends Fruit{
     @Override
     public String getInfo()
     {
-        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= "+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
+        return name+": { "+" calories= "+calories+" ,volume= "+volume+" ,color in RGB= ("+getColor().getRed()+", "+getColor().getGreen()+", "+getColor().getBlue()+")"+" }\n";
     }
     
 }

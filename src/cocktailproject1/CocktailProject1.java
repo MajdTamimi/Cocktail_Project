@@ -50,6 +50,9 @@ public class CocktailProject1 {
         catch(CocktailExp ex){
             System.out.println(ex.getMessage());
         }
+        catch(CubExp ex){
+            System.out.println(ex.getMessage());
+        }
     }
     
 }
