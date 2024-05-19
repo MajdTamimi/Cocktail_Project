@@ -45,7 +45,8 @@ import java.awt.Color;
     }
 
     public String getInfo() {
-        return "Cocktail{" + "calories=" + calories + " ,color in RGB= ("+color.getRed()+", "+color.getGreen()+", "+color.getBlue()+ "), volume=" + volume + '}';
+//        return "Cocktail{" + "calories=" + calories + " ,color in RGB= ("+color.getRed()+", "+color.getGreen()+", "+color.getBlue()+ "), volume=" + volume + "}\n";
+          return "Cocktail\nCalories: " + calories + " Cal.\nVolume: " + volume + " ml.\nColor in RGB: (" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")\n___________________________________________________________\n";
     }
      
     

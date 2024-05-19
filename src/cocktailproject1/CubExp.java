@@ -11,7 +11,7 @@ package cocktailproject1;
 public class CubExp extends Exception{
     @Override
     public String getMessage() {
-       return "can't pour more complete cubs!!";
+       return "The number of full cups are: " + Cubs.cubsNo + " Cups.\nCan't pour more full cups !!"  ;
     }
     
 }

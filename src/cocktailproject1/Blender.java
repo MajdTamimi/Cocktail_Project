@@ -16,7 +16,7 @@ public class Blender {
     
 
     public Blender() {
-    this.capacity=2000;
+    this.capacity=1500;
     this.ingredients =new ArrayList<>();
     this.testCapacity=capacity;
     }
@@ -54,16 +54,16 @@ public class Blender {
 
     }    
 
-    public double totalVolume(Cocktail cocktail){
-        double totalVolume=cocktail.getVolume();
+    public double totalVolume(){
+        double totalVolume = 0;
         for (int i = 0; i < ingredients.size(); i++) {
             double get = ingredients.get(i).getVolume();
-            totalVolume+=get;
+            totalVolume += get;
         }
         return totalVolume;
     }
-    public double totalCalories(Cocktail cocktail){
-        double totalcal=cocktail.getCalories();
+    public double totalCalories(){
+        double totalcal = 0;
         for (int i = 0; i < ingredients.size(); i++) {
             double get = ingredients.get(i).getCalories();
             totalcal+=get;
@@ -83,7 +83,10 @@ public class Blender {
               mergedColor=new Color(mergedR,mergedG,mergedB);
           }
           cocktail.setColor(mergedColor);
-          cocktail.setCalories(totalCalories(cocktail));
-          cocktail.setVolume(totalVolume(cocktail));
+          cocktail.setCalories(totalCalories());
+          cocktail.setVolume(totalVolume());
+    }
+    public  void clear(){
+        ingredients.clear();
     }
 }

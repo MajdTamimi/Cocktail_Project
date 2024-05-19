@@ -13,13 +13,13 @@ import javax.swing.JOptionPane;
 public class Cubs {
     private int capacity;
     private double cubCalorie;
-    private double cubsNo;
+    public static int cubsNo;
     private double testVolume;
     private Cocktail cocktail;
 
 
     public Cubs(Cocktail cocktail) {
-        this.capacity=20;
+        this.capacity=150;
         this.cubCalorie=0;
         this.cubsNo=0;
         this.testVolume=cocktail.getVolume();
@@ -30,13 +30,12 @@ public class Cubs {
         return capacity;
     }
      
-    public void pour()throws CocktailExp,CubExp{
+    public void pour()throws CocktailExp, CubExp{
         if(testVolume != 0){
             while(testVolume >= this.capacity)
             {
               testVolume-=this.capacity;
               cubsNo++; 
-              getInfo();
             }
             cubCalorie=cubCalories();
             System.out.println("The number of full cubs= "+cubsNo);
@@ -52,7 +51,8 @@ public class Cubs {
     }
     
     public String getInfo() {
-        return "Cub{" + "capacity= " + capacity +", cubCalories= "+cubCalorie+",numberOfFullCubs= "+cubsNo+'}';
+//        return "Cub{" + "capacity= " + capacity +", cubCalories= "+cubCalorie+",numberOfFullCubs= "+cubsNo+'}';
+    return "Cups\nNumber of full cups: " + cubsNo + " Cups.\nCup capacity: " + capacity + " ml.\nCalories in each cup: " + cubCalorie + " Cal.\n___________________________________________________________";
     }
     
     
