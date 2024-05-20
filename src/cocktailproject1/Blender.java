@@ -5,6 +5,7 @@
 package cocktailproject1;
 import java.util.ArrayList;
 import java.awt.Color;
+import java.util.Calendar;
 /**
  *
  * @author hp
@@ -13,12 +14,15 @@ public class Blender {
     private double capacity;
     ArrayList<Ingredients> ingredients;
     private double testCapacity;
+    private Logger logger;
+    Calendar c = Calendar.getInstance();
     
 
-    public Blender() {
-    this.capacity=1500;
-    this.ingredients =new ArrayList<>();
-    this.testCapacity=capacity;
+    public Blender(Logger logger) {
+    this.capacity = 1500;
+    this.ingredients = new ArrayList<>();
+    this.testCapacity = capacity;
+    this.logger = logger;
     }
 
     public double getCapacity() {
@@ -37,21 +41,24 @@ public class Blender {
          String all="";
         for (int i = 0; i < ingredients.size(); i++) {
             String getName = ingredients.get(i).getName();
-           all=all+getName+",";
+           all = all + getName+" ,";
         }
-        return "Blender:{" + "capacity:" + this.capacity +" , Ingredients are:["+ all+"]"+ '}';
+        return "Blender\nCapacity: " + this.capacity +"ml.\nIngredients are: ["+ all+"]"+ "\n";
         
     }
     
     public void add(Ingredients item) throws BlenderExp{
-        ingredients.add(item);
-        if(testCapacity>=item.getVolume()){
-           testCapacity-=item.getVolume();
+        if(testCapacity >= item.getVolume()){
+           ingredients.add(item);
+           testCapacity -= item.getVolume();
+           this.logger.log(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR)  + "--" + c.get(Calendar.HOUR_OF_DAY)
+                        + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "\nName of added ingredient: " + item.getName() + "\n___________________________________________________________\n");
        }
        else{
-           throw new BlenderExp();
+            this.logger.log(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR)  + "--" + c.get(Calendar.HOUR_OF_DAY)
+                       + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "\n" +new BlenderExp().getMessage() +"\n___________________________________________________________\n" );
+           throw new BlenderExp();        
        }
-
     }    
 
     public double totalVolume(){
@@ -73,7 +80,7 @@ public class Blender {
     }
     public void blend(Cocktail cocktail) {
           
-          Color mergedColor = new Color(0,0,0,0);
+          Color mergedColor = new Color(255, 250,250);
           for (int i = 0; i < ingredients.size(); i++) {
               Ingredients get1 = ingredients.get(i);
 
@@ -85,8 +92,18 @@ public class Blender {
           cocktail.setColor(mergedColor);
           cocktail.setCalories(totalCalories());
           cocktail.setVolume(totalVolume());
+          this.logger.log(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR)  + "--" + c.get(Calendar.HOUR_OF_DAY)
+                       + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "\n" + this.getInfo() + "\n" + cocktail.getInfo());
+          
     }
-    public  void clear(){
+    public void clear(Cocktail cocktail){
         ingredients.clear();
+        cocktail.setVolume(0);
+        cocktail.setCalories(0);
+        cocktail.setColor(new Color(255, 250, 250));
+        testCapacity = capacity;
+        this.logger.log(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR)  + "--" + c.get(Calendar.HOUR_OF_DAY)
+                       + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "\nClear\n" + this.getInfo() + "\n" + cocktail.getInfo());
+        
     }
 }

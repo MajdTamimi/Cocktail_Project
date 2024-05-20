@@ -4,7 +4,9 @@
  */
 package cocktailproject1;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,8 +16,9 @@ import javax.swing.JOptionPane;
 public class GUIProject extends javax.swing.JFrame {
     ArrayList<Ingredients> arr = new ArrayList<>();
     Cocktail cocktail = new Cocktail();
-    Blender b = new Blender();
-    boolean flag = false;
+    Logger logger = new FileLogger("ProjectLoger.log"); 
+    Blender b = new Blender(logger);
+    Calendar c = Calendar.getInstance();
     
 
     /**
@@ -90,8 +93,8 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel21 = new javax.swing.JPanel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        BlendButton12 = new javax.swing.JButton();
+        PourButton13 = new javax.swing.JButton();
         ColorButton1 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         ClearButton14 = new javax.swing.JButton();
@@ -772,23 +775,23 @@ public class GUIProject extends javax.swing.JFrame {
         jButton11.setText("Start");
         jButton11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton12.setBackground(new java.awt.Color(153, 153, 255));
-        jButton12.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
-        jButton12.setText("Blend");
-        jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        BlendButton12.setBackground(new java.awt.Color(153, 153, 255));
+        BlendButton12.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
+        BlendButton12.setText("Blend");
+        BlendButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BlendButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                BlendButton12ActionPerformed(evt);
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(153, 153, 255));
-        jButton13.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
-        jButton13.setText("Pour");
-        jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        PourButton13.setBackground(new java.awt.Color(153, 153, 255));
+        PourButton13.setFont(new java.awt.Font("Script MT Bold", 0, 28)); // NOI18N
+        PourButton13.setText("Pour");
+        PourButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        PourButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                PourButton13ActionPerformed(evt);
             }
         });
 
@@ -815,9 +818,9 @@ public class GUIProject extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
-                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BlendButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PourButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ClearButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -832,8 +835,8 @@ public class GUIProject extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PourButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BlendButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ColorButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1027,9 +1030,9 @@ public class GUIProject extends javax.swing.JFrame {
         
     }//GEN-LAST:event_MilkButtonActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void PourButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PourButton13ActionPerformed
 //         TODO add your handling code here:
-        Cubs cub=new Cubs(cocktail);
+        Cubs cub=new Cubs(cocktail, logger);
         try{
            cub.pour();
         }
@@ -1043,7 +1046,7 @@ public class GUIProject extends javax.swing.JFrame {
         BlendInformationTextArea.append(cub.getInfo());
         }
        
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_PourButton13ActionPerformed
 
     private void InformationListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InformationListValueChanged
         // TODO add your handling code here:
@@ -1054,31 +1057,26 @@ public class GUIProject extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_InformationListValueChanged
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void BlendButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlendButton12ActionPerformed
         // TODO add your handling code here:
-        BlendInformationTextArea.setText(cocktail.getInfo());
-//        String []InformationOfCocktail=new String[1];
-//         for (int i = 0; i < 1; i++) {
-//                InformationOfCocktail[i]=cocktail.getInfo();
-//        }
-//         InformationList.setListData(InformationOfCocktail);
-        ColorButton1.setBackground(cocktail.getColor());
-        if(flag){
-            b.clear();
-        }
 
-    }//GEN-LAST:event_jButton12ActionPerformed
+        BlendInformationTextArea.setText(cocktail.getInfo());
+        ColorButton1.setBackground(cocktail.getColor());
+
+    }//GEN-LAST:event_BlendButton12ActionPerformed
 
     private void ClearButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButton14ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:       
+        
         String []Ingredients=new String[arr.size()];
          for (int i = 0; i < arr.size(); i++) {
                 Ingredients[i]="";
         }
+        arr.clear();
+        b.clear(cocktail);
         InformationList.setListData(Ingredients);
         BlendInformationTextArea.setText("");
-        flag = true;
-        
+        ColorButton1.setBackground(new Color(255, 250, 250));
     }//GEN-LAST:event_ClearButton14ActionPerformed
 
     /**
@@ -1119,6 +1117,7 @@ public class GUIProject extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AppleButton;
     private javax.swing.JButton BananButton;
+    private javax.swing.JButton BlendButton12;
     private javax.swing.JTextArea BlendInformationTextArea;
     private javax.swing.JButton BlueBerryButton;
     private javax.swing.JButton ClearButton14;
@@ -1127,12 +1126,11 @@ public class GUIProject extends javax.swing.JFrame {
     private javax.swing.JButton KiwiButton;
     private javax.swing.JButton MangoButton;
     private javax.swing.JButton MilkButton;
+    private javax.swing.JButton PourButton13;
     private javax.swing.JButton StrawberryButton;
     private javax.swing.JButton SugarButton;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

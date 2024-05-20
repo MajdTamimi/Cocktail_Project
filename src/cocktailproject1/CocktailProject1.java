@@ -14,7 +14,8 @@ public class CocktailProject1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Blender blender=new Blender();
+        Logger logger = new ConsoleLogger();
+        Blender blender = new Blender(logger);
         Cocktail c=new Cocktail();
 
         try{
@@ -39,10 +40,8 @@ public class CocktailProject1 {
         Apple fruit8=new Apple();
         blender.add(fruit8);
         blender.blend(c);
-        Cubs cub=new Cubs(c);
+        Cubs cub = new Cubs(c, logger);
         cub.pour();
-        System.out.println(cub.getInfo());
-        System.out.println(blender.getInfo());
         }
         catch(BlenderExp ex){
             System.out.println(ex.getMessage());

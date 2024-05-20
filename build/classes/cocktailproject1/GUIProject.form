@@ -1259,9 +1259,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton10" min="-2" pref="104" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                  <Component id="jButton12" min="-2" pref="101" max="-2" attributes="0"/>
+                  <Component id="BlendButton12" min="-2" pref="101" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton13" min="-2" pref="106" max="-2" attributes="0"/>
+                  <Component id="PourButton13" min="-2" pref="106" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ClearButton14" min="-2" pref="106" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -1278,8 +1278,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel18" alignment="3" max="32767" attributes="0"/>
-                      <Component id="jButton13" alignment="3" max="32767" attributes="0"/>
-                      <Component id="jButton12" alignment="3" max="32767" attributes="0"/>
+                      <Component id="PourButton13" alignment="3" max="32767" attributes="0"/>
+                      <Component id="BlendButton12" alignment="3" max="32767" attributes="0"/>
                       <Component id="jButton10" alignment="3" max="32767" attributes="0"/>
                       <Component id="jButton11" alignment="3" max="32767" attributes="0"/>
                       <Component id="ColorButton1" min="-2" pref="39" max="-2" attributes="0"/>
@@ -1323,7 +1323,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton12">
+        <Component class="javax.swing.JButton" name="BlendButton12">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="99" type="rgb"/>
@@ -1339,10 +1339,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BlendButton12ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton13">
+        <Component class="javax.swing.JButton" name="PourButton13">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="99" type="rgb"/>
@@ -1358,7 +1358,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PourButton13ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ColorButton1">

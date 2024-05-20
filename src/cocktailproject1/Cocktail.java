@@ -16,7 +16,7 @@ import java.awt.Color;
 
     public Cocktail() {
        this.calories=0;
-       this.color=new Color(0,0,0,0);
+       this.color=new Color(255, 250 ,250);
        this.volume=0;
     } 
      
@@ -46,7 +46,7 @@ import java.awt.Color;
 
     public String getInfo() {
 //        return "Cocktail{" + "calories=" + calories + " ,color in RGB= ("+color.getRed()+", "+color.getGreen()+", "+color.getBlue()+ "), volume=" + volume + "}\n";
-          return "Cocktail\nCalories: " + calories + " Cal.\nVolume: " + volume + " ml.\nColor in RGB: (" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")\n___________________________________________________________\n";
+          return "Cocktail\nCalories: " + Math.round(calories) + " Cal.\nVolume: " + volume + " ml.\nColor in RGB: (" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")\n___________________________________________________________\n";
     }
      
     
