@@ -6,8 +6,6 @@ package cocktailproject1;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class FileLogger implements Logger{
     private String filePath;
-
+ 
     public FileLogger(String filePath) {
         this.filePath = filePath;
     }
@@ -28,8 +26,8 @@ public class FileLogger implements Logger{
         fw.close();
         } 
         catch(IOException ex){
-            JFrame GUIProject = new JFrame();
-            JOptionPane.showMessageDialog(GUIProject, ex.getMessage());  
+            System.out.println(ex.getMessage());
+             
         }
     
     } 
