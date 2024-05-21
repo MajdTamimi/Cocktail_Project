@@ -48,21 +48,21 @@ public class CocktailProject1 {
                 try{
                 System.out.println("Enter Your choice: "+"\n___________________________\n");
                 String ingredient=input.next();
-                if(ingredient.equals("Apple") )
+                if(ingredient.equalsIgnoreCase("Apple") )
                     blender.add(fruit1);
-                else if(ingredient.equals("Banana") )
+                else if(ingredient.equalsIgnoreCase("Banana"))
                     blender.add(fruit2);
-                else if(ingredient.equals("BlueBerry") )
+                else if(ingredient.equalsIgnoreCase("BlueBerry") )
                     blender.add(fruit3);
-                else if(ingredient.equals("Kiwi") )
+                else if(ingredient.equalsIgnoreCase("Kiwi") )
                     blender.add(fruit4);
-                else if(ingredient.equals("Mango") )
+                else if(ingredient.equalsIgnoreCase("Mango") )
                     blender.add(fruit5);
-                else if(ingredient.equals("Strawberry") )
+                else if(ingredient.equalsIgnoreCase("Strawberry") )
                     blender.add(fruit6);
-                else if(ingredient.equals("Milk") )
+                else if(ingredient.equalsIgnoreCase("Milk") )
                     blender.add(m1);
-                else if(ingredient.equals("Sugar") )
+                else if(ingredient.equalsIgnoreCase("Sugar") )
                     blender.add(s1);
                 }
                 catch(BlenderExp ex){
@@ -92,11 +92,11 @@ public class CocktailProject1 {
                 cup.setCocktail(cocktail);
                 System.out.println("Enter Your choice: "+"\n___________________________\n");
                 String information=input.next();
-                if(information.equals("Blender") )
+                if(information.equalsIgnoreCase("Blender") )
                     System.out.println(blender.getInfo());
-                else if(information.equals("Cocktail") )
+                else if(information.equalsIgnoreCase("Cocktail") )
                     System.out.println(cocktail.getInfo());
-                else if(information.equals("Cups") )
+                else if(information.equalsIgnoreCase("Cups") )
                     System.out.println(cup.getInfo());
                 break;
             case 5:

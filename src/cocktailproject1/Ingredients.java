@@ -19,8 +19,8 @@ public abstract class  Ingredients {
     public Ingredients(double calories, String name, double volume, Color IngredientsColor) {
         this.calories = calories;
         this.name = name;
-        this.volume=volume;
-        this.IngredientsColor=IngredientsColor;
+        this.volume = volume;
+        this.IngredientsColor = IngredientsColor;
     }  
     
     public double getVolume() {
@@ -34,8 +34,7 @@ public abstract class  Ingredients {
     public String getName() {
         return name;
     }
-    
-    
+     
     public Color getColor(){
         return IngredientsColor;
     }

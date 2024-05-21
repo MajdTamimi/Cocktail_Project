@@ -16,7 +16,6 @@ public class Blender {
     private double testCapacity;
     private Logger logger;
     Calendar c = Calendar.getInstance();
-    
 
     public Blender(Logger logger) {
     this.capacity = 1500;
@@ -31,10 +30,6 @@ public class Blender {
 
     public ArrayList<Ingredients> getIngredients() {
         return this.ingredients;
-    }
-
-    public void setIngredients(ArrayList<Ingredients> ingredients) {
-        this.ingredients = ingredients;
     }
 
     public String getInfo() {
@@ -79,16 +74,21 @@ public class Blender {
         
     }
     public void blend(Cocktail cocktail) {
-          
           Color mergedColor = new Color(255, 250,250);
+          int mergedR1 = 0;
+          int mergedG1 = 0;
+          int mergedB1 = 0;
           for (int i = 0; i < ingredients.size(); i++) {
               Ingredients get1 = ingredients.get(i);
-
-              int mergedR = (get1.getColor().getRed() + mergedColor.getRed()) / 2;
-              int mergedG = (get1.getColor().getGreen() +mergedColor.getGreen()) / 2;
-              int mergedB = (get1.getColor().getBlue() + mergedColor.getBlue()) / 2;
-              mergedColor=new Color(mergedR,mergedG,mergedB);
+              mergedR1 += get1.getColor().getRed();
+              mergedG1 += get1.getColor().getGreen();
+              mergedB1 += get1.getColor().getBlue();
+              
           }
+          int mergedR = mergedR1 / ingredients.size();
+          int mergedG = mergedG1 / ingredients.size();
+          int mergedB = mergedB1 / ingredients.size();
+          mergedColor = new Color(mergedR,mergedG,mergedB);
           cocktail.setColor(mergedColor);
           cocktail.setCalories(totalCalories());
           cocktail.setVolume(totalVolume());

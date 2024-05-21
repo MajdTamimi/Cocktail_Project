@@ -38,7 +38,7 @@ public class Cubs {
               testVolume-=this.capacity;
               cubsNo++; 
             }
-            cubCalorie=cubCalories();
+            cubCalorie = cubCalories();
             this.logger.log(c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR)  + "--" + c.get(Calendar.HOUR_OF_DAY)
                         + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "\n" + this.getInfo() + "\n");
 

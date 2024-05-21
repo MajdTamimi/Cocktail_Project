@@ -914,7 +914,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -929,7 +928,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -945,7 +943,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -960,7 +957,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -975,7 +971,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -991,7 +986,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -1006,7 +1000,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -1021,7 +1014,6 @@ public class GUIProject extends javax.swing.JFrame {
         try{
             b.add(item1);
             arr.add(item1);
-            b.blend(cocktail);
             newList();
         }
         catch(BlenderExp ex){
@@ -1059,7 +1051,7 @@ public class GUIProject extends javax.swing.JFrame {
 
     private void BlendButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlendButton12ActionPerformed
         // TODO add your handling code here:
-
+        b.blend(cocktail);
         BlendInformationTextArea.setText(cocktail.getInfo());
         ColorButton1.setBackground(cocktail.getColor());
 
