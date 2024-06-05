@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package cocktailproject1;
 
 import java.awt.Color;
@@ -9,21 +5,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author majd2
- */
 public class GUIProject extends javax.swing.JFrame {
+    
     ArrayList<Ingredients> arr = new ArrayList<>();
     Cocktail cocktail = new Cocktail();
     Logger logger = new FileLogger("ProjectLoger.log"); 
     Blender b = new Blender(logger);
     Calendar c = Calendar.getInstance();
     
-
-    /**
-     * Creates new form GUIProject
-     */
     public GUIProject() {
         initComponents();
     }

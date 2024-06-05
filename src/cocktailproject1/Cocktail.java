@@ -1,23 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package cocktailproject1;
+
 import java.awt.Color;
 
-/**
- *
- * @author hp
- */
  public class Cocktail {
+     
      private double calories;
      private Color color;
      private double volume;
 
     public Cocktail() {
-       this.calories=0;
-       this.color=new Color(255, 250 ,250);
-       this.volume=0;
+       this.calories = 0;
+       this.color = new Color(255, 250,250);
+       this.volume = 0;
     } 
      
     public double getCalories() {
@@ -45,9 +39,7 @@ import java.awt.Color;
     }
 
     public String getInfo() {
-//        return "Cocktail{" + "calories=" + calories + " ,color in RGB= ("+color.getRed()+", "+color.getGreen()+", "+color.getBlue()+ "), volume=" + volume + "}\n";
           return "Cocktail\nCalories: " + Math.round(calories) + " Cal.\nVolume: " + volume + " ml.\nColor in RGB: (" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")\n___________________________________________________________\n";
     }
-     
-    
+  
 }
