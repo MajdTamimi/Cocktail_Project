@@ -1,10 +1,10 @@
-package cocktailproject1;
+package cocktailproject1.Exceptions;
 
 public class CocktailExp extends Exception {
+
     @Override
     public String getMessage() {
-       return "Blender is Empty!!";
+        return "Blender is Empty!!";
     }
-    
-}
 
+}

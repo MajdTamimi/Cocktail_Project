@@ -1,4 +1,6 @@
-package cocktailproject1;
+package cocktailproject1.Exceptions;
+
+import cocktailproject1.Cubs;
 
 public class CubExp extends Exception {
     
