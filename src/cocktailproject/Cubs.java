@@ -7,11 +7,11 @@ import java.util.Calendar;
 public class Cubs {
 
     private int capacity;
-    private double cubCalorie;
-    public static int cubsNo;
-    private double testVolume;
     private Cocktail cocktail;
+    private double cubCalorie;
+    public static int cubsNo;    
     private Logger logger;
+    private double testVolume; 
     Calendar c = Calendar.getInstance();
 
     public Cubs(Cocktail cocktail, Logger logger) {

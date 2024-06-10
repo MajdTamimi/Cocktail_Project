@@ -8,10 +8,11 @@ import java.util.Calendar;
 public class Blender {
 
     private double capacity;
-    ArrayList<Ingredients> ingredients;
-    private double testCapacity;
     private Logger logger;
+    private double testCapacity;
+    ArrayList<Ingredients> ingredients;
     Calendar c = Calendar.getInstance();
+
 
     public Blender(Logger logger) {
         this.capacity = 1500;
