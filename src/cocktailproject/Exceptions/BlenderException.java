@@ -1,6 +1,6 @@
-package cocktailproject1.Exceptions;
+package cocktailproject.Exceptions;
 
-public class BlenderExp extends Exception {
+public class BlenderException extends Exception {
 
     @Override
     public String getMessage() {

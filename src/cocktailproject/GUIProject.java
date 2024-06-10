@@ -1,16 +1,17 @@
-package cocktailproject1;
+package cocktailproject;
 
-import cocktailproject1.Exceptions.CocktailExp;
-import cocktailproject1.Exceptions.BlenderExp;
-import cocktailproject1.Exceptions.CubExp;
+import cocktailproject.Exceptions.CocktailException;
+import cocktailproject.Exceptions.BlenderException;
+import cocktailproject.Exceptions.CupException;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
 
+
 public class GUIProject extends javax.swing.JFrame {
 
-    ArrayList<Ingredients> arr = new ArrayList<>();
+    ArrayList<Ingredient> arr = new ArrayList<>();
     Cocktail cocktail = new Cocktail();
     Logger logger = new FileLogger("ProjectLoger.log");
     Blender b = new Blender(logger);
@@ -128,7 +129,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/موز.jpeg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Banana.jpeg"))); // NOI18N
 
         jPanel3.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -199,7 +200,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/توتتتت.jpeg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/BlueBerry.jpeg"))); // NOI18N
 
         jPanel6.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -271,7 +272,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/تفاح.jpeg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Apple.jpeg"))); // NOI18N
 
         jPanel8.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -343,7 +344,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/images.jpeg"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Mango.jpeg"))); // NOI18N
 
         jPanel10.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -415,7 +416,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/download.jpeg"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Kiwi.jpeg"))); // NOI18N
 
         jPanel12.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -486,7 +487,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Strawberries.jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Strawberries.jpg"))); // NOI18N
 
         jPanel16.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -558,7 +559,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/سكررر.jpeg"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Sugar.jpeg"))); // NOI18N
 
         jPanel18.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -630,7 +631,7 @@ public class GUIProject extends javax.swing.JFrame {
         jPanel19.setBackground(new java.awt.Color(255, 255, 255));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/حليب.jpeg"))); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/images/Milk.jpeg"))); // NOI18N
 
         jPanel20.setBackground(new java.awt.Color(234, 234, 252));
 
@@ -902,7 +903,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_BananButtonActionPerformed
@@ -913,7 +914,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_BlueBerryButtonActionPerformed
@@ -924,7 +925,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_AppleButtonActionPerformed
@@ -935,7 +936,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_MangoButtonActionPerformed
@@ -946,7 +947,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_KiwiButtonActionPerformed
@@ -957,7 +958,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_StrawberryButtonActionPerformed
@@ -968,7 +969,7 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_SugarButtonActionPerformed
@@ -979,18 +980,18 @@ public class GUIProject extends javax.swing.JFrame {
             b.add(item1);
             arr.add(item1);
             newList();
-        } catch (BlenderExp ex) {
+        } catch (BlenderException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_MilkButtonActionPerformed
 
     private void PourButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PourButton13ActionPerformed
-        Cubs cub = new Cubs(cocktail, logger);
+        Cup cub = new Cup(cocktail, logger);
         try {
             cub.pour();
-        } catch (CocktailExp ex) {
+        } catch (CocktailException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
-        } catch (CubExp ex) {
+        } catch (CupException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         } finally {
             BlendInformationTextArea.append(cub.getInfo());
@@ -1000,7 +1001,7 @@ public class GUIProject extends javax.swing.JFrame {
     private void InformationListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_InformationListValueChanged
         int index = InformationList.getSelectedIndex();
         if (index != -1) {
-            Ingredients item = arr.get(index);
+            Ingredient item = arr.get(index);
             JOptionPane.showMessageDialog(this, item.getInfo());
         }
     }//GEN-LAST:event_InformationListValueChanged

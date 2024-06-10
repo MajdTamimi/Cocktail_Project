@@ -1,6 +1,6 @@
-package cocktailproject1.Exceptions;
+package cocktailproject.Exceptions;
 
-public class CocktailExp extends Exception {
+public class CocktailException extends Exception {
 
     @Override
     public String getMessage() {

@@ -1,4 +1,4 @@
-package cocktailproject1;
+package cocktailproject;
 
 import java.io.FileWriter;
 import java.io.IOException;

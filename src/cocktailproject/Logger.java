@@ -1,4 +1,4 @@
-package cocktailproject1;
+package cocktailproject;
 
 public interface Logger {
 
